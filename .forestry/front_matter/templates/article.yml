@@ -23,4 +23,4 @@ fields:
   hidden: false
   default: ''
 pages:
-- _posts/new-post.md
+- _posts/2018-06-20-new-post.md
