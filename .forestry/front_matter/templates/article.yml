@@ -1,4 +1,11 @@
 ---
 hide_body: false
 is_partial: false
-fields: []
+fields:
+- type: text
+  default: title
+  label: Title
+  name: title
+  hidden: false
+  config:
+    required: true
