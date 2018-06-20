@@ -4,7 +4,7 @@ date: 2018-06-20 00:00:00 +0000
 layout: article
 ---
 
-## Server
+# Server
 
 Initialize a bare repository outside of the live server (hub repo).
 
@@ -14,9 +14,9 @@ cd /var/git/myProject.git
 git init --bare
 ```
 
-Initialize a repository inside of the live server (prime repo). And add hub as a remote.
+Initialize a repository inside of the live server (prime repo). And add the hub repository as a remote.
 
-```
+```bash
 cd /var/www/html/myProject
 git init
 git remote add hub /var/git/myProject.git
@@ -27,7 +27,7 @@ git push hub master
 
 Open `vim /var/git/myProject.git/hooks/post-update` and paste this.
 
-```
+```bash
 #!/bin/sh
 
 echo
@@ -49,7 +49,7 @@ exec git-update-server-info
 
 Open `vim /var/www/html/myProject/.git/hooks/post-commit` and paste this.
 
-```
+```bash
 #!/bin/sh
 
 echo
@@ -61,16 +61,16 @@ git push hub
 
 Make hooks executable.
 
-```
+```bash
 chmod +x /var/git/myProject.git/hooks/post-update
 chmod +x /var/www/html/myProject/.git/hooks/post-commit
 ```
 
-## Local
+# Local
 
 Clone repo to the local computer.
 
-```
+```bash
 cd ~/Desktop
 git clone username@ipAddress:/var/git/myProject.git
 cd myProject
@@ -78,7 +78,7 @@ cd myProject
 
 Ready to development.
 
-```
+```bash
 echo "test" >> index.html
 git add .
 git commit -m "First local change."
