@@ -17,10 +17,5 @@ fields:
   type: datetime
   hidden: false
   default: ''
-- name: coverPhoto
-  label: Coverphoto
-  type: text
-  hidden: false
-  default: ''
 pages:
 - _posts/2018-06-20-first-post.md
