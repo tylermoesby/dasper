@@ -6,3 +6,9 @@ layout: article
 ## Server
 
 Initialize a bare repository outside of the live server.
+
+```bash
+mkdir -p /var/git/myProject.git
+cd /var/git/myProject.git
+git init --bare
+```
